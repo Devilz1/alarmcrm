@@ -45,3 +45,23 @@
     font-size: 18px;
     font-style: italic;
 }
+
+/* TASK 1 */
+
+.task-1, .task-2{
+    display: flex;
+}
+
+.task-1__way, .task-2__way{
+    width: 50%;
+    text-align: center;
+}
+
+.task-1__way fieldset, .task-2__way fieldset{
+    height: 175px;
+}
+
+.task-1__input, .task-2__input{
+    margin: 10px 0;
+    width: 90%;
+}
