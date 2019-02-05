@@ -7,20 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css">
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            $(".form__submit").on("click", function () {
-                $.ajax({
-                    type: "POST",
-                    url: "Zodiak.php",
-                    data: $("#myForm").serialize(),
-                    success: function(msg){
-                        $(".conclusion__text").empty().append(msg);
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="ajax.js"></script>
     <title>Task #2</title>
 </head>
 <body>

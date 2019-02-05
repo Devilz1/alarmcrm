@@ -1,6 +1,12 @@
 <?php
 
-class Zodiak{
+abstract class AbstZodiak{
+    // Свойство с датой пользователя
+    protected $first;
+    // Объект с годом пользователя (чтобы была возможность вычислять разницу дат)
+    protected $year;
+    public $cnt = 0;
+
     protected $arrayZodiak = [
         ["from" => "21.03", "to" => "20.04", "name" => "Овен"],
         ["from" => "21.04", "to" => "21.05", "name" => "Телец"],
@@ -15,13 +21,9 @@ class Zodiak{
         ["from" => "21.01", "to" => "19.02", "name" => "Водолей"],
         ["from" => "20.02", "to" => "20.03", "name" => "Рыбы"],
     ];
+}
 
-    // Объект с датой пользователя
-    protected $first;
-        // Объект с годом пользователя (чтобы была возможность вычислять разницу дат)
-    protected $year;
-    public $cnt = 0;
-
+class Zodiak extends AbstZodiak {
     public function countingZodiak($userZodiak)
     {
         $this->first = date_create(date("d.m.Y", strtotime($userZodiak)));
@@ -35,8 +37,15 @@ class Zodiak{
 
             if($diff_two->format("%R") == "-" && $diff_three->format("%R") == "+" || $diff_two->format("%R%a") == "+0" || $diff_three->format("%R%a") == "-0") {
                 echo $arDate["name"]."&#98".str_pad($this->cnt, 2, '0', STR_PAD_LEFT).";";
+                $exception = true;
             }
             $this->cnt++;
+        }
+
+        // Поскольку зодиак Козерога приходится на период перехода от года к году, мы формируем исключение
+        // при котором явно указываем на элемент нашего массива с нужными данными
+        if($exception != true){
+            echo $this->arrayZodiak[9]["name"]."&#9809;";
         }
     }
 }
