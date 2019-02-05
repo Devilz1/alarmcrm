@@ -24,6 +24,9 @@
     <title>Task #2</title>
 </head>
 <body>
+    <nav>
+        <a href="../index.php">Назад</a>
+    </nav>
     <div class="task-2">
         <div class="task-2__form">
             <h2 class="form__title">Узнайте кто вы по знаку зодиака!</h2>

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="start-page">
-        <a href="task-1/index.html" class="start-page__block">
+        <a href="task-1/index.php" class="start-page__block">
             <h3 class="start-page__title">
                 Задание №1
             </h3>
@@ -28,7 +28,7 @@
                 После ввода в input даты рождения выводить знак зодиака в зависимости от полученных данных. Желательно использовать подход объектно-ориентированного программирования.
             </p>
         </a>
-        <a href="task-3/index.html" class="start-page__block">
+        <a href="task-3/index.php" class="start-page__block">
             <h3 class="start-page__title">
                 Задание №3
             </h3>

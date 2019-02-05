@@ -10,6 +10,9 @@
     <title>Task #1</title>
 </head>
 <body>
+    <nav>
+        <a href="../index.php">Назад</a>
+    </nav>
     <div class="task-1">
         <div class="task-1__way">
             <fieldset>
