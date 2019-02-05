@@ -16,7 +16,7 @@
 </nav>
     <div class="shadow-mask"></div>
     <div class="window-auth">
-        <form action="">
+        <form action="" class="formAuth">
             <label for="window-auth__login">Логин</label>
             <input type="text" name="login" id="window-auth__login" required>
             <label for="window-auth__password">Пароль</label>

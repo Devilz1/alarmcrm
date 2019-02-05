@@ -1,4 +1,6 @@
 $(function () {
+    var exception = false;
+
     $(".buttonActive").on("click", function () {
         $(".shadow-mask").fadeIn().on("click", function () {
             $(".shadow-mask").fadeOut();
@@ -14,6 +16,20 @@ $(function () {
     });
 
     $(".window-auth__submit-yes").on("click", function () {
+        $(".formAuth input").each(function(nf, e){
+            if($(this).val() == '' || $(this).val() == false){
+                $(this).css("borderColor", "red");
+                exception = true;
+                return true;
+            }else{
+                $(this).css("borderColor", "");
+                exception = false;
+            }
+        })
+
+        if(exception == true)
+            return false;
+
         $(".window-auth").animate({
             left: "-5000px",
         })
@@ -25,6 +41,20 @@ $(function () {
     });
 
     $(".window-auth__submit-no").on("click", function () {
+        $(".formAuth input").each(function(nf, e){
+            if($(this).val() == '' || $(this).val() == false){
+                $(this).css("borderColor", "red");
+                exception = true;
+                return true;
+            }else{
+                $(this).css("borderColor", "");
+                exception = false;
+            }
+        })
+
+        if(exception == true)
+            return false;
+
         $(".window-auth").animate({
             left: "-5000px",
         })
